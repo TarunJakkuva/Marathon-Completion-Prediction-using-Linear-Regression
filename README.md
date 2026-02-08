@@ -1,81 +1,83 @@
-# Marathon-Completion-Prediction-using-Linear-Regression
-Linear Regression model analyzing the relationship between weekly training and marathon completion using synthetic data. Includes model evaluation with accuracy metrics and confusion matrix.
-This project explores whether **weekly training frequency** influences the likelihood of **successfully completing a marathon**, using a simple supervised machine learning approach.
+# Marathon Completion Prediction using Logistic Regression
 
-A **Linear Regression model** is trained on synthetic data to understand the relationship between training consistency and marathon completion outcomes.
+This project uses **Logistic Regression** to analyze whether **weekly training frequency** increases the probability of **successfully completing a marathon**.
+
+The goal is to demonstrate a complete machine learning workflow — from data splitting to model evaluation — using a simple, interpretable classification model.
 
 ---
 
 ## 📌 Problem Statement
 
-Does increasing weekly training improve the probability of completing a marathon?
+Does increasing weekly training improve the likelihood of completing a marathon?
 
-This project models that relationship using numerical features and evaluates performance on unseen test data.
+This project frames the question as a **binary classification problem** and evaluates how well a Logistic Regression model can predict marathon completion.
 
 ---
 
 ## 📊 Dataset
 
-- The dataset used in this project is **synthetic**
-- Data was sourced from publicly available examples on the web
-- It is used **strictly for learning and demonstration purposes**
+- The dataset used is **synthetic**
+- It was sourced from publicly available examples on the web
+- Used strictly for **learning and demonstration**
 - No real athlete or personal data is involved
+
+**Target Variable:**
+- `1` → Marathon completed  
+- `0` → Marathon not completed  
 
 ---
 
 ## ⚙️ Methodology
 
-- **Model Used:** Linear Regression
+- **Model Used:** Logistic Regression
 - **Train-Test Split:**
-  - 80% Training data
+  - 60% Training data
   - 20% Testing data
-- The model predicts binary outcomes:
-  - `1` → Marathon completed
-  - `0` → Marathon not completed
+- Model trained to estimate the **probability of completion** based on training frequency
 
 ---
 
 ## 📈 Model Evaluation
 
-The model is evaluated on test data using:
+The trained model is evaluated on unseen test data using:
 
 - Accuracy score
 - Confusion Matrix
 - Classification Report (Precision, Recall, F1-score)
 
-### Sample Results
+### Results Summary
 
 - **Accuracy:** ~90%
-- The model shows strong performance, especially for the positive completion class
-- Minor misclassifications are present, expected due to small dataset size
+- Strong performance for the positive class (marathon completion)
+- Minor misclassifications observed, expected due to small dataset size
 
 ---
 
 ## 🧠 Key Learnings
 
-- Regular weekly training shows a strong positive association with marathon completion
+- Logistic Regression is effective for simple binary outcome prediction
+- Weekly training frequency shows a strong positive association with marathon completion
 - Learned how to:
-  - Split data into train and test sets
-  - Fit a regression model
-  - Interpret confusion matrices and classification reports
-  - Evaluate model performance beyond accuracy alone
+  - Apply Logistic Regression for classification
+  - Interpret precision, recall, and F1-score
+  - Use confusion matrices for deeper evaluation than accuracy alone
 
 ---
 
 ## ⚠️ Limitations
 
 - Dataset is synthetic and limited in size
-- Linear regression is a simple baseline model
-- Results should not be interpreted as real-world athletic or medical advice
+- Model assumes a linear decision boundary
+- Results are illustrative and not meant for real-world athletic decision-making
 
 ---
 
 ## 🚀 Future Improvements
 
-- Generate custom synthetic data programmatically
-- Try Logistic Regression for binary classification
-- Add ROC curve and AUC score analysis
-- Increase dataset size for more robust evaluation
+- Generate synthetic data programmatically
+- Add ROC curve and AUC analysis
+- Compare with other classifiers (Decision Tree, Random Forest)
+- Include probability threshold tuning
 
 ---
 
