@@ -27,7 +27,7 @@ This project models that relationship using numerical features and evaluates per
 
 - **Model Used:** Linear Regression
 - **Train-Test Split:**
-  - 60% Training data
+  - 80% Training data
   - 20% Testing data
 - The model predicts binary outcomes:
   - `1` → Marathon completed
